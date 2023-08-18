@@ -8,13 +8,13 @@ class UnidadeViewSet(ModelViewSet):
     serializer_class = UnidadeSerializer
     permission_classes = [AllowAny]
     queryset = Unidade.objects.all()
-    http_method_names = ['get', 'put']
+    # http_method_names = ['get', 'put']
 
 class MaquinaViewSet(ModelViewSet):
     serializer_class = MaquinaSerializer
     permission_classes = [AllowAny]
     queryset = Maquina.objects.all()
-    http_method_names = ['get', 'put']
+    # http_method_names = ['get', 'put']
 
 class ImpressaoViewSet(ModelViewSet):
     serializer_class = ImpressaoSerializer

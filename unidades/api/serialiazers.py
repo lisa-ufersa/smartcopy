@@ -23,11 +23,7 @@ class UnidadeSerializer(serializers.ModelSerializer):
         return obj.maquina.modelo
 
 class ImpressaoSerializer(serializers.ModelSerializer):
-    requisitante = serializers.SerializerMethodField()
 
     class Meta:
         model = Impressao
-        fields = ['id', 'requisitante', 'data_solicitada', 'data_impressa', 'data_entregue', 'maquina', 'quantidade', 'arquivo']
-    
-    def get_requisitante(self, obj):
-        return self.requisitante.user.username
+        fields = ['id', 'data_solicitada', 'data_impressa', 'data_entregue', 'maquina', 'qnt', 'arquivo', 'colorido']

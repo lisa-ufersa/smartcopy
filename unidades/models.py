@@ -32,10 +32,10 @@ class Unidade(models.Model):
 class Impressao(models.Model):
     qnt = models.IntegerField()
     colorido = models.BooleanField()
-    maquina = models.ForeignKey(Maquina, on_delete=models.CASCADE)
+    maquina = models.ForeignKey(Maquina, on_delete=models.CASCADE, null=True)
     data_solicitada = models.DateField()
-    data_imperssa = models.DateField()
-    data_entregue = models.DateField()
+    data_impressa = models.DateField(blank=True, null=True)
+    data_entregue = models.DateField(blank=True, null=True)
     arquivo = models.CharField(max_length=200)
 
     class Meta:
