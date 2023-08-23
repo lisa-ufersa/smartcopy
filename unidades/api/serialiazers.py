@@ -26,4 +26,4 @@ class ImpressaoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Impressao
-        fields = ['id', 'data_solicitada', 'data_impressa', 'data_entregue', 'maquina', 'qnt', 'arquivo', 'colordo']
+        fields = ['id', 'data_solicitada', 'data_impressa', 'data_entregue', 'maquina', 'qnt', 'arquivo', 'colorido']
